@@ -29,11 +29,20 @@
         .container {
             padding: 20px;
         }
-        img {
-            max-width: 80%;
-            height: auto;
-            margin-top: 20px;
-            animation: rotate 20s linear infinite;
+        .logo-wrapper {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%; /* This makes the container circular */
+            clip-path: circle(50%); /* This masks the logo as a circle */
+        }
+        .logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fits within the circle */
+            animation: rotate 20s linear infinite; /* Rotating the logo */
         }
         h1 {
             font-size: 2.5rem;
@@ -84,7 +93,9 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://github.com/fabriziosalmi/transversalpuntozero/blob/main/docs/transversal.png?raw=true" alt="Transversal Logo">
+        <div class="logo-wrapper">
+            <img src="https://github.com/fabriziosalmi/transversalpuntozero/blob/main/docs/transversal.png?raw=true" alt="Transversal Logo">
+        </div>
         <h1>T R A N S V E R S A L . 0</h1>
         <p>Transversal Reaction Against Nato Supremacy, Violences, Encoded Repression,<br>
            Submission And Laws.<br>
